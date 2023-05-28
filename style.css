@@ -1,0 +1,294 @@
+* {
+    font-family: "Lato";
+    box-sizing: border-box; /* padding dan margin ditambahkan ke dalamnya */
+    scroll-behavior: smooth;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    color: #979797;
+    font-size: 24px;
+}
+
+img {
+    width: 50%;
+}
+
+header {
+    background-color: #2e3332;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 128px;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    letter-spacing: 10px;
+}
+
+nav > a {
+    margin-left: 12px;
+}
+
+nav > a:hover {
+    cursor: pointer;
+    color: #ffc108;
+}
+
+section,
+main,
+footer {
+    padding: 64px 128px;
+}
+
+span {
+    color: #ffc108;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+main > div > h1 {
+    font-size: 100px;
+    margin: 60px 0 30px 0;
+}
+
+main div > p {
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 30px 0;
+}
+
+main > div > img {
+    width: 30%;
+}
+
+#about {
+    background-color: #dee4e2;
+    display: flex;
+    text-align: center;
+}
+
+#about > div > p {
+    color: black;
+}
+
+#project {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider-container {
+    text-align: center;
+    /* background-color: #eee; */
+}
+
+.slider-item {
+    display: none;
+}
+
+.slider-item > img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 340px;
+    left: 35%;
+    font-weight: bold;
+    font-size: 48px;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color: #ffc108;
+}
+
+.next {
+    right: 7%;
+}
+
+/* Animasi */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#contact {
+    background-color: #dee4e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.input-group input,
+.input-group textarea {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-bottom: 2px solid #ffc108;
+}
+
+form button {
+    border: none;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #ffc108;
+    color: white;
+    padding: 8px 24px;
+}
+
+footer {
+    color: white;
+    padding: 16px 128px 10px 128px;
+    background-color: #59615f;
+}
+
+.footer-details {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right > nav > a {
+    font-size: 18px;
+}
+
+.footer-right nav {
+    margin: 10px 0;
+}
+
+/* laptop or pc */
+@media only screen and (max-width: 1200px) {
+    .prev,
+    .next {
+        top: 340px;
+        left: 30%;
+    }
+
+    .next {
+        right: -5%;
+    }
+}
+
+/* tablet */
+@media only screen and (max-width: 1000px) {
+    .prev,
+    .next {
+        top: 340px;
+        left: 25%;
+    }
+
+    .next {
+        right: -19%;
+    }
+}
+
+/* smartphone */
+@media only screen and (max-width: 670px) {
+    header > nav > a {
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+
+    .prev,
+    .next {
+        top: 340px;
+        left: 15%;
+    }
+
+    .next {
+        right: -48%;
+    }
+}
