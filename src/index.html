@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="This is My Portofolio" />
+    <meta name="keywords" content="Frontend, HTML, CSS, JavaScript, React, Git" />
+    <meta name="author" content="Riyanda Cavin Sinambela" />
+    <title>My Profile</title>
+</head>
+
+<body>
+    <header>
+        <h1>RYCS</h1>
+        <nav>
+            <a class="hidden-link" href="#about">About Me</a>
+            <a class="hidden-link" href="#project">Project</a>
+            <a class="hidden-link" href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <main id="#main">
+        <div>
+            <h1>RIYANDA SINAMBELA<span>.</span></h1>
+            <p>MY PORTOFOLIO</p>
+            <img src="/images/kartun2bg.png" alt="" />
+        </div>
+    </main>
+
+    <section id="about">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                I am a highly motivated and passionate computer science
+                professional with a strong academic background and practical
+                experience in various areas of the field. I hold a
+                Bachelor's degree in Computer Science from Sepuluh Nopember
+                Institute of Technology, where I gained a solid foundation
+                in programming languages, algorithms, data structures, and
+                computer architecture.
+                <br /><br />
+                During my studies, I actively participated in programming
+                competitions and coding challenges, which enhanced my
+                problem-solving skills and ability to work under pressure. I
+                also took part in several projects, both individually and as
+                part of a team, where I developed software applications,
+                conducted rigorous testing, and implemented innovative
+                solutions. <br /><br />
+                Additionally, I have gained hands-on experience through
+                internships at leading tech companies. In these roles, I had
+                the opportunity to collaborate with seasoned professionals,
+                contributing to the development of cutting-edge software
+                products and refining my skills in areas such as software
+                engineering, database management, and web development.
+                <br /><br />
+                My expertise extends to various programming languages such
+                as Java, Python, and C++, as well as familiarity with web
+                technologies such as HTML, CSS, and JavaScript. I have also
+                worked with frameworks and tools such as Django, React, and
+                Git, enabling me to build scalable and efficient
+                applications.
+                <br /><br />
+                Beyond technical skills, I possess excellent analytical
+                abilities and a strong aptitude for problem-solving. I have
+                a keen interest in exploring emerging technologies such as
+                artificial intelligence, machine learning, and
+                cybersecurity. I am always eager to expand my knowledge and
+                stay up-to-date with the latest advancements in the field.
+                <br /><br />
+                As a computer science professional, I am not only proficient
+                in the technical aspects but also have excellent
+                communication and collaboration skills. I am adept at
+                conveying complex concepts to both technical and
+                non-technical audiences, which has been beneficial in
+                presenting my work and collaborating with cross-functional
+                teams.
+                <br /><br />
+                In summary, I am a dedicated computer science professional
+                with a comprehensive skill set, a drive for continuous
+                learning, and a passion for leveraging technology to solve
+                real-world problems. I am excited about contributing to
+                innovative projects and making a positive impact in the
+                ever-evolving world of computer science.
+            </p>
+        </div>
+    </section>
+
+    <section id="project">
+        <div>
+            <h2>My Project</h2>
+            <div class="slider-container">
+                <div class="slider-item fade">
+                    <img src="/images/1.png" alt="" />
+                    <p>Project 1</p>
+                </div>
+
+                <div class="slider-item fade">
+                    <img src="/images/2.png" alt="" />
+                    <p>Project 2</p>
+                </div>
+
+                <div class="slider-item fade">
+                    <img src="/images/3.png" alt="" />
+                    <p>Project 3</p>
+                </div>
+
+                <a class="prev" onclick="updateSlide(-1)">&#10094;</a>
+                <a class="next" onclick="updateSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-detail">
+            <h2>Contact Me</h2>
+            <form onsubmit="onFormSubmit(event)">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="inputEmail">Input Your Email</label>
+                        <input type="email" id="inputEmail" placeholder="Email required" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="inputMessage">Input Your Message</label>
+                        <textarea id="inputMessage" cols="40" rows="5" placeholder="Message required"
+                            required></textarea>
+                    </div>
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-details">
+            <div class="footer-left">
+                <h1>RYCS</h1>
+            </div>
+            <div class="footer-right">
+                <nav class="nav-footer">
+                    <a href="#about">About Me</a>
+                </nav>
+                <nav class="nav-footer">
+                    <a href="#project">My Project</a>
+                </nav>
+                <nav class="nav-footer">
+                    <a href="#contact">Contact Me</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
